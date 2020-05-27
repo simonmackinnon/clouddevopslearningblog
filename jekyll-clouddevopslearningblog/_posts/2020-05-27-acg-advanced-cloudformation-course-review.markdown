@@ -1,0 +1,36 @@
+## Course Review: A Cloud Guru, Advanced AWS CloudFormation- Adrian Cottrell
+### Course URL: https://learn.acloud.guru/course/aws-advanced-cloudformation/dashboard
+
+After completing the AWS Associate Certification trifecta late last year, and Azure Fundamentals earlier this year, I took a break from study to figure out what path of learning I wanted to do next. Given I work as an AWS Cloud Engineer, I thought the AWS DevOps Professional certification would be highly relevant as well as an awseome opportunity to learn some new concepts and technology.
+
+[This blog](https://medium.com/@apzuk3/what-it-takes-to-pass-the-aws-certified-devops-engineer-professional-exam-40453cf0e3d4) is a really good starting point (I think) to what needs to be learnt/studied for this certification. I love Infrastructure as Code, and this post recommended doing the A Cloud Guru - Advanced AWS CloudFormation course to bruch up on CloudFormation skills.
+
+I loved this course. It posed some business challenge case studies, in two fictitious companies. This made the learning much more realistic. 
+
+The course content provides the templates to be deployed. For the first case-study, I re-wrote this, iterating on it as the course progressed. This meant that I got hands-on experience writing the CFN templates, and importantly experienced all of the troubleshooting that comes along with doing so.
+
+For those who are unfamiliar, Infrastructure as Code is a way of declating in a text file (of some kind), the infrastructure resources, as well their configuration, that you desire to be created. There are many different libraries, frameworks and services to do so. For AWS, [CloudFormation](https://aws.amazon.com/cloudformation/) is the native service that they provide to manage this. Some of the advantages of this service over it's competitors is the easy integration into your AWS account, ease of learning/setup, as well as a slight security win (looking at you Terraform with your plain-text state-files!).
+
+Some really cool concepts are taught in this, one of my favourites is how [cfn-hup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-hup.html) is explained, as this is something that always seems confusing to me. Being able to have EC2 resources detect changes in it's own meta-data and run some specified commands is really cool. Tieing this to re-implement the cfn-init process after a change is detected is a powereful mechanism for triggering reloading of intance setup command when a stack is updated.
+
+The course was, I believe, recorded around 2017/18, so some of the screens in the console are a little out-of-date, although had changed dramatically since then. At one point, we are required to create some Google web authentication credentials to use in an app we create. The steps around this had changes slightly, but the accompanying instructions from ACG helped to navigate these changes.
+
+Another area of learning in this course, that picqued my interest, was CloudFormation custom resources using Lambda. I've known about this feature of CFN for some time, and the idea had always interested me. Adrian teaches this content in a very simple manner. From these small and simple demos, it's clear custom resources is a super powerful part of CloudFormation!
+
+#### Amazon Linux 1 AMI Usage and Upgrade Issue:
+* The EC2 instances used in the templates were based off of the [Amazon Linux 1 AMI](https://aws.amazon.com/amazon-linux-ami/). Given [this image type is flagged for End-Of-Life at the end of 2020](https://aws.amazon.com/blogs/aws/update-on-amazon-linux-ami-end-of-life/) this is somewhat problematic. For the first case-study, I updated the template(s) to use Amazon Linux 2, which proved difficult. The cfn-init config packages command has difficulty installing an appropriate version of PHP for WordPress to run when the yum 'php' package is used. If the default packages are used, the following error occurs in WordPress: \
+\
+_**"Your server is running PHP version 5.4.16 but WordPress 5.2 requires at least 5.6.20."**_ \
+\
+To overcome this, we need to install PHP > v7.2 using the amazon-linux-extras. Unfortunately, this isn't availble in the cfn-init configuration packages section. To get this to install, I had to the following command to my install_wordpress configuration:  
+\
+{% highlight yaml %}
+commands:
+    enable_php:
+        cwd: "~"
+        command: "amazon-linux-extras install php7.2"
+{% endhighlight %} \
+\
+In any case, that seemed to be one of the only issues when upgrading the instance to Amazon Linux 2. 
+
+
