@@ -1,4 +1,4 @@
-## Course Review: A Cloud Guru, Advanced AWS CloudFormation- Adrian Cottrell
+## Course Review: A Cloud Guru, Advanced AWS CloudFormation- Adrian Cantrill
 ### Course URL: https://learn.acloud.guru/course/aws-advanced-cloudformation/dashboard
 
 After completing the AWS Associate Certification trifecta late last year, and Azure Fundamentals earlier this year, I took a break from study to figure out what path of learning I wanted to do next. Given I work as an AWS Cloud Engineer, I thought the AWS DevOps Professional certification would be highly relevant as well as an awseome opportunity to learn some new concepts and technology.
