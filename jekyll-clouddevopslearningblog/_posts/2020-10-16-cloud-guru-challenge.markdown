@@ -7,7 +7,10 @@ tags: cloudguruchallenge cloudformation aws acloudguru python etl lambda dynamod
 ---
 ## Cloud Guru Challenge - September 2020
 
-I gave the #CloudGuruChallenge by Forrest Brazeal (A Cloud Guru) for September a go! I started 1 days before the deadline, so rushed to finish a bit. Here's some of the stuff that I did!
+I gave the #CloudGuruChallenge by Forrest Brazeal (A Cloud Guru) for September a go! I started 1 days before the deadline, so rushed to finish a bit. The next challenge will be worked on straight away, and the Readme files will definitely have more than just titles. "Working software over comprehensive documentation" right? 
+
+
+Here's some of the stuff that I did!
 Read the challenge details here:
 [https://acloudguru.com/blog/engineering/cloudguruchallenge-python-aws-etl](https://acloudguru.com/blog/engineering/cloudguruchallenge-python-aws-etl)
 
