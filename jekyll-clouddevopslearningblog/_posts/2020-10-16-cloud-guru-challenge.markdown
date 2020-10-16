@@ -2,20 +2,20 @@
 layout: post
 title:  "Cloud Guru Challenge - September 2020"
 date:   2020-10-16 14:15:00 +1000
-categories: aws lambda cli
+categories: cloudguruchallenge cloudformation aws acloudguru python etl lambda dynamodb quicksight codebuild
 tags: cloudguruchallenge cloudformation aws acloudguru python etl lambda dynamodb quicksight codebuild
 ---
 ## Cloud Guru Challenge - September 2020
 
 I gave the #CloudGuruChallenge by Forrest Brazeal (A Cloud Guru) for September a go! I started 1 days before the deadline, so rushed to finish a bit. Here's some of the stuff that I did!
 Read the challenge details here:
-https://acloudguru.com/blog/engineering/cloudguruchallenge-python-aws-etl
+[https://acloudguru.com/blog/engineering/cloudguruchallenge-python-aws-etl](https://acloudguru.com/blog/engineering/cloudguruchallenge-python-aws-etl)
 
 Here's the basic architecture of the solution:
 ![The Graph](/media/etl-job-architecture.jpg)
 
 See my code here:
-https://github.com/simonmackinnon/cloudguruchallenge/tree/main/2020-09
+[https://github.com/simonmackinnon/cloudguruchallenge/tree/main/2020-09](https://github.com/simonmackinnon/cloudguruchallenge/tree/main/2020-09)
 
 ### ETL Job using Python
 The job runs automatically using a CloudWatch scheduled rule, once per day. Setting this up was pretty straightforward. One gotcha for people is that a CloudWatch rule needs permission to invoke Lambda functions.
