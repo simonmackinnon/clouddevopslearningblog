@@ -2,7 +2,7 @@
 layout: post
 title:  "Cloud Guru Challenge - September 2020"
 date:   2020-10-16 14:15:00 +1000
-categories: cloudguruchallenge cloudformation aws acloudguru python etl lambda dynamodb quicksight codebuild
+categories: aws serverless cloudgurchallenge
 tags: cloudguruchallenge cloudformation aws acloudguru python etl lambda dynamodb quicksight codebuild
 ---
 ## Cloud Guru Challenge - September 2020
