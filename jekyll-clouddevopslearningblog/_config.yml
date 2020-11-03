@@ -28,7 +28,7 @@ texture:
 
   analytics_id: 'UA-167551328-1'
 
-  disqus_shortname: the-cloud-devops-learning-blog
+  #disqus_shortname: the-cloud-devops-learning-blog
 
   social_links:
     twitter: simonmackinnon

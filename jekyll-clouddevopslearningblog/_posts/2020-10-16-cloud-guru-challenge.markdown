@@ -7,7 +7,7 @@ tags: cloudguruchallenge cloudformation aws acloudguru python etl lambda dynamod
 ---
 ## Cloud Guru Challenge - September 2020
 
-I gave the #CloudGuruChallenge by Forrest Brazeal (A Cloud Guru) for September a go! I started 1 days before the deadline, so rushed to finish a bit. The next challenge will be worked on straight away, and the Readme files will definitely have more than just titles. "Working software over comprehensive documentation" right? 
+I gave the #CloudGuruChallenge by Forrest Brazeal (A Cloud Guru) for September a go! I started 1 day before the deadline, so rushed to finish a bit. The next challenge will be worked on straight away, and the Readme files will definitely have more than just titles. "Working software over comprehensive documentation" right? 
 
 
 Here's some of the stuff that I did!
@@ -29,7 +29,7 @@ Some of the nuances of the challenge were around only loading the most recent da
 
 It send SNS notifications for different status updates. I set this up as per the brief, although I was pushing to my topic for every row that couldn't be read correctly, which proved to be a little verbose (at one point I was sending hundreds of error notifications due to a bug in my code). Pretty fun and easy to set up. Then getting CloudFormation passing the output ARN to the environment variables of the Lambda function kept this relatively re-deployable.
 
-For Reporing, I used API Gateway to expose the DynamoDB table data, and then consumed it in JavaScript. Some of the gotchas in this (a) while the API request type for performing Scan operations is GET, the HTTP method for DynamoDB service calls is always POST (b) I found getting the Integration Request Mapping Template and the Integration Repsonse Mapping Template are right for this is a little difficult (c) ensuring the calls to the API had the correct headers to avoid a CORS / Preflight error is always difficult (and something I should spend some time learning about, it always trips me up). I built a simple vanilla JS demo site (due to time constraints) to retrieve (and sort) the data, then display using [Chart.js](https://www.chartjs.org/)
+For Reporting, I used API Gateway to expose the DynamoDB table data, and then consumed it in JavaScript. Some of the gotchas in this (a) while the API request type for performing Scan operations is GET, the HTTP method for DynamoDB service calls is always POST (b) I found getting the Integration Request Mapping Template and the Integration Repsonse Mapping Template are right for this is a little difficult (c) ensuring the calls to the API had the correct headers to avoid a CORS / Preflight error is always difficult (and something I should spend some time learning about, it always trips me up). I built a simple vanilla JS demo site (due to time constraints) to retrieve (and sort) the data, then display using [Chart.js](https://www.chartjs.org/)
 
 ![The Graph](/media/covidGraph.png)
 
@@ -43,7 +43,7 @@ And you can see the graph output here:
 
 ### Infrastructure as Code
 Everything is defined in CloudFormation (except uploading function package to S3 and publishing new versions)
-Some of this was HAAARD... especially setting up API Gateway to expose the DynamoDB data without using Lambda. This is relatively easy in the console, but I found some of the settings difficult in YAML/CloudFormation. 
+Some of this was HAAARD... especially setting up API Gateway to expose the DynamoDB data without using Lambda. This is relatively easy in the console, but I found some of the settings difficult in YAML/CloudFormation.  As mentioned above setting the Mapping Templates for the request/response continuoulsy lead to formatting issues... until it didn't.
 
 ### TBD:
 * Lambda layers: the package built was little big, and some of that could be reduced by using layers, especially for the Pandas library
