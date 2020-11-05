@@ -217,7 +217,7 @@ Here's the architecture I implemented:
 
    Another improvement I'd make would be to add CodeBuild jobs for automated deployments. I didn't set up a CI/CD pipeline for anything, so this will definitely be part of V2!
 
-   I wanted to include Movie posters in the recommendations and title searches. While this information is obtainable via web-scraping of IMDB, or 3rd-party API calls, tying these calls into the API for title recommendations really slowed the site down. I have some ifeas
+   I wanted to include Movie posters in the recommendations and title searches. While this information is obtainable via web-scraping of IMDB, or 3rd-party API calls, tying these calls into the API for title recommendations really slowed the site down. I have some ideas for how this would work, namely storing the images in S3 for all titles, iterating over the records in the database using step functions.
 
    Finally, a major imporovement I'd make would be to the clustered data. I think using some Natural Languange Processing to group movie titles based on plot text would be a fantastic way to approach this. Another way would be to get user rating and viewing data and perform collaborative clustering.
 
