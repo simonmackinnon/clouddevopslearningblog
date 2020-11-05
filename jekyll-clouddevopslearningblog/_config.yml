@@ -25,6 +25,7 @@ texture:
   tagline:   "A discussion of the stuff I'm exploring around DevOps. Love learning about AWS, cloud, DevOps, going to tech-conferences and meetups, learning new programming patterns and committed to industry certification via self-learning."
   date_format: "%-d %b %Y"
   style: [black]
+  showNav: true
 
   analytics_id: 'UA-167551328-1'
 
