@@ -8,6 +8,8 @@ tags: aws sagemaker acloudguru python jupyter machine-learning recommendation im
 # Cloud Guru Challenge - October 2020
 
 ## Background
+* Goal:	Build a Netflix Style Recommendation Engine with Amazon SageMaker
+* Outcome:	Gain real machine learning and AWS skills while getting hands-on with a real-world project to add to your portfolio
 https://acloudguru.com/blog/engineering/cloudguruchallenge-machine-learning-on-aws
 
 # TL;DR:
@@ -185,7 +187,7 @@ Here's the architecture I implemented:
    * Sagemaker Notebook writes trained model to CSV file in S3 Bucket
    * Scheduled Lambda loads CSV data into DynamoDB table
    * API Gateway using Lambda proxy queries the data to find titles and return a sample of titles in the same cluster as the chosen title.
-   * Static React JS website (hosted in S3, served up via CloudFront) allows users to search for movies and request recommendations based on this.
+   * Static React JS website (hosted in S3, served up via CloudFront) allows users to search for movies and request recommendations based on this. Don't judge on the styling!
 
    ![MoviesForMe.net](/media/moviesforme.net.png)
 

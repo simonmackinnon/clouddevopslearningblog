@@ -35,7 +35,7 @@ For Reporting, I used API Gateway to expose the DynamoDB table data, and then co
 
 Anyway, you access the data URL here:
 
-[https://7vmx7x6mwg.execute-api.ap-southeast-2.amazonaws.com/live/cumulativedata](https://7vmx7x6mwg.execute-api.ap-southeast-2.amazonaws.com/live/cumulativedata)
+[https://2tp0wsvdr2.execute-api.ap-southeast-2.amazonaws.com/live/cumulativedata](https://2tp0wsvdr2.execute-api.ap-southeast-2.amazonaws.com/live/cumulativedata)
 
 And you can see the graph output here:
 
