@@ -22,6 +22,9 @@ comments: true
 
 bannerimage: /media/bannerimage.png
 
+site:
+  url:  'https://theclouddevopslearningblog.com'
+
 texture:
   title: The Cloud DevOps Learning Blog
   tagline:   "For The Cloud & DevOps I Don't Yet Know."
@@ -31,10 +34,9 @@ texture:
 
   analytics_id: 'UA-167551328-1'
 
-  #disqus_shortname: the-cloud-devops-learning-blog
+  disqus_shortname: 'the-cloud-devops-learning-blog'
 
   social_links:
-    twitter: simonmackinnon
     github:  simonmackinnon
     linkedIn: in/simonmackinnon # format: locale/username
 
@@ -46,6 +48,8 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag  
   
+
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
