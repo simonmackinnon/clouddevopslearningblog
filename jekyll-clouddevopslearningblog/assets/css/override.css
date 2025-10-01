@@ -59,3 +59,13 @@
   line-height: 1.2 !important;
   padding: .2rem 0 !important;
 }
+
+
+/* Keep the logo tidy in the nav bar */
+.site-nav .brand { display:flex; align-items:center; line-height:0; }
+.site-nav .brand img { height:40px; width:auto; display:block; }
+
+/* Slightly smaller on very small screens */
+@media (max-width: 420px) {
+  .site-nav .brand img { height:32px; }
+}

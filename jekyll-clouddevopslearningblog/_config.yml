@@ -62,7 +62,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag  
   
-
 title: The Cloud DevOps Learning Blog
 tagline:   "For The Cloud & DevOps I Don't Yet Know."
 

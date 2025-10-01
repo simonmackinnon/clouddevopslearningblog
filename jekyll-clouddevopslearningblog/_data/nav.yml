@@ -1,9 +1,0 @@
-- title: Home
-  url: /
-- title: Blog
-  url: /blog/
-  dropdown: posts
-- title: About
-  url: /about/
-- title: Tags
-  url: /tags/
