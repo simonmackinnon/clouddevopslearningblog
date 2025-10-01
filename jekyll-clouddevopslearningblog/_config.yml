@@ -42,6 +42,9 @@ texture:
       url: /about/
     - title: "Comment Policy"
       url: /comment-policy/
+    - title: Résumé
+      url: https://s3.ap-southeast-2.amazonaws.com/theclouddevopslearningblog.com/media/Simon+Mackinnon.pdf
+      newtab: true
 
   analytics_id: 'UA-167551328-1'
 
