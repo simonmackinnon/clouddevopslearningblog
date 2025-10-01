@@ -1,0 +1,24 @@
+/* style the summary like a button */
+.nav-details > summary.nav-btn {
+  list-style: none; cursor: pointer; margin-left: auto;
+  padding: 8px 10px; border: 1px solid #eaecef; border-radius: 6px;
+}
+.nav-details > summary::-webkit-details-marker { display: none; } /* remove default marker */
+
+/* desktop: show inline, hide the summary button */
+@media (min-width: 769px) {
+  .nav-details > summary { display: none; }
+  .nav-details .nav-list { display: flex !important; gap: 10px; margin-left: auto; }
+}
+
+/* mobile: dropdown panel */
+@media (max-width: 768px) {
+  .nav-details { margin-left: auto; position: relative; }
+  .nav-details .nav-list {
+    position: absolute; right: 0; top: 44px;
+    display: none; flex-direction: column; background: #fff;
+    border: 1px solid #eaecef; border-radius: 8px; padding: 8px; min-width: 180px;
+    z-index: 1000;
+  }
+  .nav-details[open] .nav-list { display: flex; }
+}

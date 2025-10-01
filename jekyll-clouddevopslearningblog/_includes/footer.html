@@ -1,0 +1,14 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© {{ "now" | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+    <p class="small">
+      Built with <a href="https://jekyllrb.com" rel="noopener">Jekyll</a>.
+      {% if site.github_username %}
+        • <a href="https://github.com/{{ site.github_username }}" rel="noopener">GitHub</a>
+      {% endif %}
+      {% if site.rss %}
+        • <a href="{{ site.rss | relative_url }}">RSS</a>
+      {% endif %}
+    </p>
+  </div>
+</footer>

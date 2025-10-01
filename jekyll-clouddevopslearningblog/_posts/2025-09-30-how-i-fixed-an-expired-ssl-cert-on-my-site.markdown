@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How I Fixed an Expired SSL Certificate on My S3 + CloudFront Static Site"
-date: 2025-10-01
+date: 2025-09-30 00:00:00 +1000
 categories: aws cloudfront s3 devops troubleshooting
 ---
 
@@ -35,7 +35,7 @@ This error means the certificate that encrypts traffic to my site was no longer 
 
 ---
 
-## 🔍 Step 2: Check What Certificate Is Being Used
+## Step 2: Check What Certificate Is Being Used
 
 To see exactly what certificate CloudFront was serving, I used `openssl`:
 
@@ -133,7 +133,7 @@ This was a small problem, but it taught me a few useful lessons that are worth s
 
 Static sites on S3 + CloudFront are incredibly powerful and cost-effective, but even “serverless” websites need a little maintenance. SSL certificates are one of those things you *don’t* want to ignore — and now I’ll never forget to keep an eye on mine!
 
-Hopefully, this guide helps you fix an expired certificate quickly and with confidence. 🔐
+Hopefully, this guide helps you fix an expired certificate quickly and with confidence. 
 
 ---
 

@@ -1,0 +1,30 @@
+:root { --text:#1b1f23; --muted:#6a737d; --accent:#ff9900; --bg:#fff; --line:#eaecef; }
+*{box-sizing:border-box} body{margin:0; font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:var(--text); background:var(--bg)}
+.container{max-width:960px; margin:0 auto; padding:0 16px}
+
+.site-header{border-bottom:1px solid var(--line); padding:16px 0; background:#fff}
+.header-inner{display:flex; gap:16px; align-items:baseline; flex-wrap:wrap}
+.site-title{font-weight:700; text-decoration:none; color:var(--text); font-size:1.25rem}
+.tagline{margin:0; color:var(--muted)}
+
+.site-nav{border-bottom:1px solid var(--line); background:#fafbfc}
+.nav-list{display:flex; gap:12px; list-style:none; margin:0; padding:8px 0}
+.nav-link{display:inline-block; padding:8px 10px; text-decoration:none; color:var(--text); border-radius:6px}
+.nav-link:hover{background:#f3f4f6}
+.nav-link.active{background:var(--accent); color:#000}
+
+.nav-item.has-dropdown{position:relative}
+.nav-item .dropdown{display:none; position:absolute; top:100%; left:0; background:#fff; border:1px solid var(--line); border-radius:8px; padding:8px; list-style:none; margin:6px 0 0}
+.nav-item:hover .dropdown{display:block}
+.dropdown li{white-space:nowrap}
+.dropdown .see-all{border-top:1px solid var(--line); margin-top:6px; padding-top:6px}
+
+main.container{padding:24px 0}
+
+.post-list{list-style:none; padding:0}
+.post-list li{padding:6px 0; border-bottom:1px dashed var(--line)}
+.post-date{color:var(--muted); font-size:0.9rem}
+
+.site-footer{border-top:1px solid var(--line); margin-top:40px; padding:24px 0; font-size:0.95rem; color:var(--muted)}
+.site-footer a{color:inherit; text-decoration:underline}
+.small{font-size:0.9rem}

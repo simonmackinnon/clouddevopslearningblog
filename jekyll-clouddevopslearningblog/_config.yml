@@ -30,7 +30,15 @@ texture:
   tagline:   "For The Cloud & DevOps I Don't Yet Know."
   date_format: "%-d %b %Y"
   style: [black]
+  
   showNav: true
+  navigation:
+    - title: Home
+      url: /
+    - title: Blog
+      url: /blog/
+    - title: About
+      url: /about/
 
   analytics_id: 'UA-167551328-1'
 
@@ -48,6 +56,13 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag  
   
+
+title: The Cloud DevOps Learning Blog
+tagline:   "For The Cloud & DevOps I Don't Yet Know."
+
+github_username: simonmackinnon   # change to yours
+rss: /feed.xml                     # if you generate a feed
+
 
 
 # Exclude from processing.

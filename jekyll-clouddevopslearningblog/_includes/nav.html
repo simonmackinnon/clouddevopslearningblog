@@ -1,0 +1,19 @@
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+
+    <details class="nav-details">
+      <summary class="nav-btn" aria-label="Open menu">Menu</summary>
+      <ul class="nav-list">
+        {% for item in site.texture.navigation %}
+          <li class="nav-item">
+            <a href="{{ item.url | relative_url }}"
+               class="{% if page.url == item.url or page.url contains item.url %}active{% endif %}">
+              {{ item.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </details>
+  </div>
+</nav>
