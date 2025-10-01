@@ -37,8 +37,11 @@ texture:
       url: /
     - title: Blog
       url: /blog/
+      dropdown: posts   # ← only this item gets a posts dropdown
     - title: About
       url: /about/
+    - title: "Comment Policy"
+      url: /comment-policy/
 
   analytics_id: 'UA-167551328-1'
 

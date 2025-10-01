@@ -4,13 +4,23 @@
 
     <details class="nav-details">
       <summary class="nav-btn" aria-label="Open menu">Menu</summary>
+
       <ul class="nav-list">
         {% for item in site.texture.navigation %}
-          <li class="nav-item">
+          <li class="nav-item{% if item.dropdown == 'posts' %} has-dd{% endif %}">
             <a href="{{ item.url | relative_url }}"
                class="{% if page.url == item.url or page.url contains item.url %}active{% endif %}">
               {{ item.title }}
             </a>
+
+            {% if item.dropdown == 'posts' %}
+              <ul class="dropdown">
+                {% for post in site.posts limit:10 %}
+                  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+                {% endfor %}
+                <li class="see-all"><a href="{{ '/blog/' | relative_url }}">See all →</a></li>
+              </ul>
+            {% endif %}
           </li>
         {% endfor %}
       </ul>
