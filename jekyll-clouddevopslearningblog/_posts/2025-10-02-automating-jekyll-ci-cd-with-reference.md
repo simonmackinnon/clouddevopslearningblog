@@ -128,6 +128,10 @@ If you created your `Gemfile.lock` on macOS, the Linux runner on GitHub Actions 
 
 Commit the updated lockfile once and you can remove this step.
 
+### 4. `You must copy the vendor posts.html to the repo if you've added custom code`
+
+I added some custom code in the post.html of the bundle directly on my machine. So when I used github actions to build the site and deploy, it didn't have these changes. By copying this to the repo version at _includes/post.html, this meant these changes could be added when built remotely
+
 ---
 
 ## 🚀 Going Further
