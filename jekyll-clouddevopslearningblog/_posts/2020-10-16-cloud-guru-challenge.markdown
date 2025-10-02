@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Cloud Guru Challenge - September 2020"
+title:  "COVID Data Engineering in AWS and Python #CodeGuruChallenge"
 date:   2020-10-16 14:15:00 +1000
 categories: aws serverless cloudgurchallenge
 tags: cloudguruchallenge cloudformation aws acloudguru python etl lambda dynamodb quicksight codebuild
