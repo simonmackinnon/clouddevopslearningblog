@@ -17,22 +17,22 @@
       </div>
 
         <!-- Configure Disqus -->
-      {%- if site.texture.disqus_shortname -%}
-        <div id="disqus_thread" style="margin-top:25px"></div>
-        <script>
-          var disqus_config = function () {
-            this.page.url = 'https://theclouddevopslearningblog.com{{ page.url | absolute_url }}';
-            this.page.identifier = '{{ page.url | absolute_url }}';
-          };
-          (function() {
-            var d = document, s = d.createElement('script');
-            s.src = 'https://{{ site.texture.disqus_shortname }}.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-          })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-      {%- endif -%}
+        {% if page.comments %}
+            <div id="disqus_thread" style="margin-top:25px"></div>
+            <script>
+                var disqus_config = function () {
+                this.page.url = '{{ page.url | absolute_url }}';
+                this.page.identifier = '{{ page.id | default: page.url }}';
+                };
+                (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://the-cloud-devops-learning-blog.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+        {% endif %}
   </main>
   {%- include footer.html -%}
 </body>
