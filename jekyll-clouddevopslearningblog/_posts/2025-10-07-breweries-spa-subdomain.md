@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "How I Hosted a React Single-Page App (BreweriesNearMe) on a Subdomain with S3, CloudFront and Route 53"
+title: "How I Hosted a JavaScript Single-Page App (BreweriesNearMe) on a Subdomain with S3, CloudFront and Route 53"
 date: 2025-10-07
 categories: devops aws s3 cloudfront frontend
 description: A step-by-step walkthrough of deploying a separate single-page application under a subdomain of an existing Jekyll site using AWS S3, CloudFront, ACM, and Route 53.
 ---
 
-One of the best things about static sites hosted on AWS is how easy it is to extend them. My main Jekyll blog (`theclouddevopslearningblog.com`) runs from an S3 bucket behind CloudFront, but I recently wanted to host a **standalone React single-page application (SPA)** on a subdomain:
+One of the best things about static sites hosted on AWS is how easy it is to extend them. My main Jekyll blog (`theclouddevopslearningblog.com`) runs from an S3 bucket behind CloudFront, but I recently wanted to host a **standalone JavaScript single-page application (SPA)** on a subdomain:
 
 ```
 https://breweriesnearme.theclouddevopslearningblog.com
