@@ -29,7 +29,7 @@ defaults:
 
 comments: true
 
-bannerimage: /media/bannerimage.png
+bannerimage: /logo.svg
 
 site:
   url:  'https://theclouddevopslearningblog.com'
