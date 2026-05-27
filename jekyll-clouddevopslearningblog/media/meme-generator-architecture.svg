@@ -1,0 +1,198 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="aws-orange" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF9900"/>
+      <stop offset="100%" stop-color="#e07b00"/>
+    </linearGradient>
+    <linearGradient id="blue-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <linearGradient id="purple-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="green-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#f97316"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="560" fill="url(#sky)" rx="18"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="17" font-weight="700" fill="#f1f5f9" letter-spacing="0.5">MemeCloud — AWS Architecture</text>
+  <text x="450" y="56" text-anchor="middle" font-size="11" fill="#94a3b8">memes.theclouddevopslearningblog.com</text>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- ROW 1: Browser + GitHub Actions                -->
+  <!-- ═══════════════════════════════════════════════ -->
+
+  <!-- Browser card -->
+  <rect x="30" y="80" width="130" height="72" rx="14" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="1" filter="url(#card-shadow)"/>
+  <text x="95" y="105" text-anchor="middle" font-size="24">🌐</text>
+  <text x="95" y="126" text-anchor="middle" font-size="11" font-weight="600" fill="#e2e8f0">Browser</text>
+  <text x="95" y="141" text-anchor="middle" font-size="9" fill="#94a3b8">User / HTTPS</text>
+
+  <!-- GitHub Actions card -->
+  <rect x="30" y="400" width="130" height="72" rx="14" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="1" filter="url(#card-shadow)"/>
+  <text x="95" y="425" text-anchor="middle" font-size="22">⚙️</text>
+  <text x="95" y="447" text-anchor="middle" font-size="11" font-weight="600" fill="#e2e8f0">GitHub Actions</text>
+  <text x="95" y="462" text-anchor="middle" font-size="9" fill="#94a3b8">CI/CD Pipeline</text>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- AWS REGION BOX                                  -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <rect x="195" y="68" width="670" height="430" rx="16" fill="rgba(255,153,0,0.04)" stroke="rgba(255,153,0,0.22)" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="820" y="88" text-anchor="end" font-size="10" fill="#FF9900" font-weight="600">ap-southeast-2</text>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- CLOUDFRONT                                      -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <rect x="215" y="80" width="140" height="72" rx="14" fill="rgba(255,153,0,0.15)" stroke="#FF9900" stroke-width="1.5" filter="url(#card-shadow)"/>
+  <text x="285" y="103" text-anchor="middle" font-size="11" font-weight="700" fill="#FF9900">CloudFront</text>
+  <text x="285" y="118" text-anchor="middle" font-size="9" fill="#fbbf24">CDN Distribution</text>
+  <text x="285" y="132" text-anchor="middle" font-size="8" fill="#94a3b8">memes.theclouddevops…</text>
+  <text x="285" y="144" text-anchor="middle" font-size="8" fill="#94a3b8">HTTPS, OAI, PriceClass_100</text>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- S3 STATIC BUCKET                               -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <rect x="420" y="80" width="140" height="72" rx="14" fill="rgba(52,211,153,0.13)" stroke="#34d399" stroke-width="1.5" filter="url(#card-shadow)"/>
+  <text x="490" y="103" text-anchor="middle" font-size="11" font-weight="700" fill="#34d399">S3 Bucket</text>
+  <text x="490" y="118" text-anchor="middle" font-size="9" fill="#6ee7b7">Static Site + Assets</text>
+  <text x="490" y="132" text-anchor="middle" font-size="8" fill="#94a3b8">index.html, app.js, gallery,</text>
+  <text x="490" y="144" text-anchor="middle" font-size="8" fill="#94a3b8">data/images/*, Private (OAI)</text>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- ACM Certificate (us-east-1 note)               -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <rect x="625" y="80" width="140" height="72" rx="14" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.5" filter="url(#card-shadow)"/>
+  <text x="695" y="103" text-anchor="middle" font-size="11" font-weight="700" fill="#a78bfa">ACM Certificate</text>
+  <text x="695" y="118" text-anchor="middle" font-size="9" fill="#c4b5fd">SSL/TLS — us-east-1</text>
+  <text x="695" y="132" text-anchor="middle" font-size="8" fill="#94a3b8">DNS validation via</text>
+  <text x="695" y="144" text-anchor="middle" font-size="8" fill="#94a3b8">Route 53 CNAME record</text>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- ROW 2: API GATEWAY                             -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <rect x="215" y="210" width="140" height="72" rx="14" fill="rgba(255,153,0,0.15)" stroke="#FF9900" stroke-width="1.5" filter="url(#card-shadow)"/>
+  <text x="285" y="232" text-anchor="middle" font-size="11" font-weight="700" fill="#FF9900">API Gateway</text>
+  <text x="285" y="247" text-anchor="middle" font-size="9" fill="#fbbf24">HTTP API v2</text>
+  <text x="285" y="261" text-anchor="middle" font-size="8" fill="#94a3b8">images.theclouddevops…</text>
+  <text x="285" y="273" text-anchor="middle" font-size="8" fill="#94a3b8">CORS config, $default route</text>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- LAMBDA                                          -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <rect x="420" y="210" width="140" height="72" rx="14" fill="rgba(56,189,248,0.13)" stroke="#38bdf8" stroke-width="1.5" filter="url(#card-shadow)"/>
+  <text x="490" y="232" text-anchor="middle" font-size="11" font-weight="700" fill="#38bdf8">Lambda</text>
+  <text x="490" y="247" text-anchor="middle" font-size="9" fill="#7dd3fc">Python 3.12 · 512 MB</text>
+  <text x="490" y="261" text-anchor="middle" font-size="8" fill="#94a3b8">Pillow image gen,</text>
+  <text x="490" y="273" text-anchor="middle" font-size="8" fill="#94a3b8">/generate  /popular  /templates</text>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- DYNAMODB                                        -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <rect x="625" y="210" width="140" height="72" rx="14" fill="rgba(56,189,248,0.13)" stroke="#38bdf8" stroke-width="1.5" filter="url(#card-shadow)"/>
+  <text x="695" y="232" text-anchor="middle" font-size="11" font-weight="700" fill="#38bdf8">DynamoDB</text>
+  <text x="695" y="247" text-anchor="middle" font-size="9" fill="#7dd3fc">meme-generator-stats</text>
+  <text x="695" y="261" text-anchor="middle" font-size="8" fill="#94a3b8">PAY_PER_REQUEST</text>
+  <text x="695" y="273" text-anchor="middle" font-size="8" fill="#94a3b8">templateId → generateCount</text>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- TERRAFORM                                       -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <rect x="340" y="390" width="310" height="72" rx="14" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.5" filter="url(#card-shadow)"/>
+  <text x="495" y="413" text-anchor="middle" font-size="11" font-weight="700" fill="#a78bfa">Terraform</text>
+  <text x="495" y="428" text-anchor="middle" font-size="9" fill="#c4b5fd">Infrastructure as Code</text>
+  <text x="495" y="442" text-anchor="middle" font-size="8" fill="#94a3b8">State → S3 bucket (meme-generator-terraform-state-*)</text>
+  <text x="495" y="455" text-anchor="middle" font-size="8" fill="#94a3b8">Provisions: CloudFront · S3 · API GW · Lambda · DynamoDB · ACM · Route 53</text>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- ROUTE 53                                        -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <rect x="680" y="390" width="170" height="72" rx="14" fill="rgba(255,153,0,0.15)" stroke="#FF9900" stroke-width="1.5" filter="url(#card-shadow)"/>
+  <text x="765" y="413" text-anchor="middle" font-size="11" font-weight="700" fill="#FF9900">Route 53</text>
+  <text x="765" y="428" text-anchor="middle" font-size="9" fill="#fbbf24">DNS — A aliases</text>
+  <text x="765" y="442" text-anchor="middle" font-size="8" fill="#94a3b8">memes.* → CloudFront</text>
+  <text x="765" y="455" text-anchor="middle" font-size="8" fill="#94a3b8">images.* → API Gateway</text>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- ARROWS                                          -->
+  <!-- ═══════════════════════════════════════════════ -->
+
+  <!-- Browser → CloudFront (HTTPS request) -->
+  <line x1="160" y1="116" x2="210" y2="116" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <text x="185" y="110" text-anchor="middle" font-size="8" fill="#38bdf8">HTTPS</text>
+
+  <!-- Browser → API Gateway (generate POST) -->
+  <line x1="95" y1="152" x2="95" y2="240" stroke="#64748b" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="95" y1="246" x2="210" y2="246" stroke="#64748b" stroke-width="1" marker-end="url(#arrow)" stroke-dasharray="4 3"/>
+  <text x="148" y="260" text-anchor="middle" font-size="8" fill="#64748b">POST /generate</text>
+
+  <!-- CloudFront → S3 -->
+  <line x1="355" y1="116" x2="415" y2="116" stroke="#f97316" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+  <text x="385" y="110" text-anchor="middle" font-size="8" fill="#f97316">OAI</text>
+
+  <!-- CloudFront → ACM (uses cert) -->
+  <line x1="355" y1="105" x2="620" y2="105" stroke="#a78bfa" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="490" y="99" text-anchor="middle" font-size="8" fill="#a78bfa">TLS cert</text>
+
+  <!-- API GW → Lambda -->
+  <line x1="355" y1="246" x2="415" y2="246" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <text x="385" y="240" text-anchor="middle" font-size="8" fill="#38bdf8">invoke</text>
+
+  <!-- Lambda → DynamoDB -->
+  <line x1="560" y1="246" x2="620" y2="246" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <text x="590" y="240" text-anchor="middle" font-size="8" fill="#38bdf8">UpdateItem</text>
+
+  <!-- Lambda → S3 (read images) -->
+  <line x1="490" y1="210" x2="490" y2="155" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <text x="506" y="185" font-size="8" fill="#34d399">GetObject</text>
+
+  <!-- GitHub Actions → Terraform -->
+  <line x1="160" y1="436" x2="335" y2="436" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <text x="248" y="430" text-anchor="middle" font-size="8" fill="#a78bfa">tf apply</text>
+
+  <!-- GitHub Actions → S3 (sync) -->
+  <line x1="160" y1="420" x2="420" y2="155" stroke="#34d399" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow-blue)"/>
+  <text x="290" y="310" font-size="8" fill="#34d399" transform="rotate(-36,290,310)">s3 sync</text>
+
+  <!-- Terraform → Route 53 -->
+  <line x1="650" y1="426" x2="675" y2="426" stroke="#FF9900" stroke-width="1" marker-end="url(#arrow-orange)"/>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- LEGEND                                          -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <rect x="215" y="500" width="640" height="46" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="235" y1="520" x2="260" y2="520" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="265" y="524" font-size="9" fill="#94a3b8">User request flow</text>
+  <line x1="335" y1="520" x2="360" y2="520" stroke="#f97316" stroke-width="1.5"/>
+  <text x="365" y="524" font-size="9" fill="#94a3b8">OAI (private S3)</text>
+  <line x1="455" y1="520" x2="480" y2="520" stroke="#34d399" stroke-width="1.5"/>
+  <text x="485" y="524" font-size="9" fill="#94a3b8">S3 asset read</text>
+  <line x1="565" y1="520" x2="590" y2="520" stroke="#a78bfa" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="595" y="524" font-size="9" fill="#94a3b8">IaC provisioning</text>
+  <line x1="680" y1="520" x2="705" y2="520" stroke="#64748b" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="710" y="524" font-size="9" fill="#94a3b8">CI/CD deploy</text>
+
+  <text x="235" y="537" font-size="9" fill="#94a3b8">🟠 AWS managed  🔵 Compute / data  🟢 Storage  🟣 Infra / certs</text>
+</svg>
