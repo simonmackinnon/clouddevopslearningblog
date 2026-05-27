@@ -16,6 +16,8 @@ This post is about what actually happened — not the polished version. It cover
 
 ![MemeCloud homepage showing the editor with a Drake meme template selected](/media/meme-generator-homepage.png)
 
+![The searchable meme template gallery showing all 117 templates in a paginated grid](/media/meme-generator-gallery.png)
+
 The live site is at **[memes.theclouddevopslearningblog.com](https://memes.theclouddevopslearningblog.com)**. It has:
 
 - A canvas-based editor with draggable text layers
