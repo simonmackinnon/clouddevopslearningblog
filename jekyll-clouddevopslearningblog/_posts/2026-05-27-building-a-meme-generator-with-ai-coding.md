@@ -62,6 +62,7 @@ But I ran into its limits quickly:
 - **Context window is short.** Copilot sees the current file and a bit of adjacent code. As soon as the project had more than a few files, suggestions started ignoring what was already implemented elsewhere. I got duplicate function definitions and conflicting naming conventions.
 - **It doesn't reason about deployment.** I'd ask it to help debug why a Lambda wasn't routing correctly, and it would suggest checking IAM permissions or tweaking the function code — without considering that the problem was in how the API Gateway event payload was structured.
 - **It can't run commands or read logs.** Every iteration required me to manually copy error output back into a chat window, which interrupted flow constantly.
+- **Its training data has a shelf life.** When Copilot scaffolded the Terraform for the Lambda function, it suggested `runtime = "python3.9"` — a runtime that AWS deprecated in late 2023 and has since blocked for new deployments. Copilot had no way of knowing the runtime was end-of-life; it just pattern-matched on what it had seen in training data. The deploy would have failed (or worse, silently used a frozen, unpatched runtime) if I hadn't caught it and bumped to `python3.12`.
 
 I switched to Claude (via Claude Code) partway through. The difference was significant enough that I want to be specific about it.
 
@@ -270,13 +271,16 @@ Paste the full log line, the full curl response, the full error message. "Lambda
 **3. Verify structural changes with the tool the bug lives in.**  
 After fixing the `cp -R` bug, verify with `aws s3 ls`, not just by loading the page. Page load can succeed via cache while the underlying structure is still wrong.
 
-**4. Pin or understand your dependencies.**  
+**4. Verify runtime and service versions against current AWS docs.**  
+AI tools suggest what they've seen in training data — which has a cutoff date. AWS deprecates Lambda runtimes, removes EC2 instance types, and changes service defaults over time. Always cross-check the runtime version (e.g. `python3.9` → deprecated), the Terraform provider version, and any managed service settings against the current AWS docs before deploying. A deprecated runtime might still accept a `terraform apply` but will be frozen on an unpatched interpreter.
+
+**6. Pin or understand your dependencies.**  
 Every `Pillow`, `boto3`, or `requests` without a version pin is a future incident. At minimum, know what major version you're on and what breaking changes the next major version includes.
 
-**5. Path-filtered CI is worth the setup time.**  
+**7. Path-filtered CI is worth the setup time.**  
 The GitHub Actions workflow has three separate jobs — `terraform`, `deploy_site`, `filter` — and only runs the relevant one based on which files changed. This cuts workflow time significantly and avoids re-deploying unchanged Lambdas when you only touched a CSS file.
 
-**6. CloudFront always 403s for missing objects (not 404).**  
+**8. CloudFront always 403s for missing objects (not 404).**  
 With a private S3 bucket + OAI, CloudFront converts missing-object responses to 403 Forbidden. Don't assume a 403 means permissions — check the actual object key in S3 first.
 
 ---
