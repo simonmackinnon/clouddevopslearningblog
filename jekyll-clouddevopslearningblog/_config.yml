@@ -67,6 +67,9 @@ texture:
 #theme: minima
 theme: texture
 
+sass:
+  quiet_deps: true
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag  
