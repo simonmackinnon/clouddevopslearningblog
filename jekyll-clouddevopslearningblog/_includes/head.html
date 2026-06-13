@@ -1,21 +1,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
-<link rel="stylesheet" href="{{ "/assets/css/override.css" | relative_url }}">
-<link rel="shortcut icon" type="image/png" href="logo.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/override.css' | relative_url }}">
+<link rel="shortcut icon" type="image/png" href="{{ '/logo.ico' | relative_url }}">
 
-<!--  Essential META Tags -->
 <meta property="og:title" content="{{ page.title | default: site.title }}">
-<meta property="og:description" content="{{ site.texture.tagline }}">
-<meta property="og:image" content="https://theclouddevopslearningblog.com{{site.bannerimage}}" />
-<meta property="og:url" content="https://theclouddevopslearningblog.com">
+<meta property="og:description" content="{{ page.excerpt | default: site.texture.tagline | strip_html | strip_newlines | truncate: 160 }}">
+<meta property="og:image" content="https://theclouddevopslearningblog.com/logo.svg">
+<meta property="og:url" content="https://theclouddevopslearningblog.com{{ page.url }}">
+<meta property="og:site_name" content="{{ site.title }}">
 <meta name="twitter:card" content="summary_large_image">
-<!--  Non-Essential, But Recommended -->
-<meta property="og:site_name" content="The Cloud DevOps Learning Blog">
-<meta name="twitter:image:alt" content="Banner for The Cloud DevOps Learning Blog">
+<meta name="twitter:image:alt" content="The Cloud DevOps Learning Blog">
 
-<title>{{ page.title | default: site.title }}</title>
-
+<title>{% if page.title and page.title != site.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 {% seo %}

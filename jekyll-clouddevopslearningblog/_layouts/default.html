@@ -1,19 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  {%- include head.html -%}
 </head>
 <body>
-  {% include head.html %}
-  {% include nav.html %}
-
-  <main class="container">
-    {{ content }}
-  </main>
-
-  {% include footer.html %}
+  {%- include nav.html -%}
+  {{ content }}
+  {%- include footer.html -%}
+  <script src="{{ '/assets/js/blog.js' | relative_url }}"></script>
 </body>
 </html>
