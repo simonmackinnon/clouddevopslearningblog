@@ -18,7 +18,7 @@ So I built one. **TypeStar** is a free, no-subscription, no-ads typing tutor des
 
 ## What TypeStar Actually Does
 
-![TypeStar level map showing all 20 levels across 6 colourful zones](/media/typestar.png)
+![TypeStar level map showing all 20 levels across 6 colourful zones](/media/typetastic.png)
 
 The app has **20 levels across 6 zones**, each zone targeting a different part of the keyboard or typing skill:
 
@@ -43,7 +43,7 @@ No email required to start. No credit card ever.
 
 ## The Architecture
 
-![TypeStar AWS architecture diagram showing CloudFront, S3, Cognito, API Gateway, Lambda, and DynamoDB](/media/typestar-architecture.png)
+![TypeStar AWS architecture diagram showing CloudFront, S3, Cognito, API Gateway, Lambda, and DynamoDB](/media/typestar-architecture.svg)
 
 ```
                     ┌─────────────────────────────────────────┐
