@@ -1,0 +1,227 @@
+<svg viewBox="0 0 960 590" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#f97316"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#34d399"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#a78bfa"/>
+    </marker>
+    <marker id="arrow-yellow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#fbbf24"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="590" fill="url(#sky)" rx="18"/>
+
+  <!-- Title -->
+  <text x="480" y="36" text-anchor="middle" font-size="17" font-weight="700" fill="#f1f5f9" letter-spacing="0.5">TypeStar — AWS Architecture</text>
+  <text x="480" y="54" text-anchor="middle" font-size="11" fill="#94a3b8">typestar.theclouddevopslearningblog.com</text>
+
+  <!-- ════════════════════════════════════ -->
+  <!-- EXTERNAL CARDS (left column)        -->
+  <!-- ════════════════════════════════════ -->
+
+  <!-- Browser -->
+  <rect x="16" y="78" width="118" height="74" rx="14" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="1" filter="url(#card-shadow)"/>
+  <text x="75" y="103" text-anchor="middle" font-size="24">🌐</text>
+  <text x="75" y="124" text-anchor="middle" font-size="11" font-weight="600" fill="#e2e8f0">Browser</text>
+  <text x="75" y="139" text-anchor="middle" font-size="9" fill="#94a3b8">User / HTTPS</text>
+
+  <!-- ElevenLabs (build-time) -->
+  <rect x="16" y="270" width="118" height="80" rx="14" fill="rgba(251,191,36,0.10)" stroke="#fbbf24" stroke-width="1" stroke-dasharray="5 3" filter="url(#card-shadow)"/>
+  <text x="75" y="296" text-anchor="middle" font-size="20">🔊</text>
+  <text x="75" y="315" text-anchor="middle" font-size="11" font-weight="600" fill="#fbbf24">ElevenLabs</text>
+  <text x="75" y="329" text-anchor="middle" font-size="9" fill="#94a3b8">TTS · build-time</text>
+  <text x="75" y="341" text-anchor="middle" font-size="8" fill="#64748b">53 MP3s generated</text>
+
+  <!-- GitHub Actions -->
+  <rect x="16" y="455" width="118" height="74" rx="14" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="1" filter="url(#card-shadow)"/>
+  <text x="75" y="480" text-anchor="middle" font-size="22">⚙️</text>
+  <text x="75" y="501" text-anchor="middle" font-size="11" font-weight="600" fill="#e2e8f0">GitHub Actions</text>
+  <text x="75" y="516" text-anchor="middle" font-size="9" fill="#94a3b8">infra.yml · deploy.yml</text>
+
+  <!-- ════════════════════════════════════ -->
+  <!-- AWS REGION BOX                       -->
+  <!-- ════════════════════════════════════ -->
+  <rect x="155" y="66" width="790" height="504" rx="16" fill="rgba(255,153,0,0.04)" stroke="rgba(255,153,0,0.22)" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="936" y="86" text-anchor="end" font-size="10" fill="#FF9900" font-weight="600">ap-southeast-2</text>
+
+  <!-- ════════════════════════════════════ -->
+  <!-- ROW 1: Delivery layer               -->
+  <!-- ════════════════════════════════════ -->
+
+  <!-- CloudFront -->
+  <rect x="170" y="80" width="155" height="74" rx="14" fill="rgba(255,153,0,0.15)" stroke="#FF9900" stroke-width="1.5" filter="url(#card-shadow)"/>
+  <text x="247" y="103" text-anchor="middle" font-size="11" font-weight="700" fill="#FF9900">CloudFront</text>
+  <text x="247" y="118" text-anchor="middle" font-size="9" fill="#fbbf24">CDN Distribution</text>
+  <text x="247" y="132" text-anchor="middle" font-size="8" fill="#94a3b8">HTTPS · OAI · PriceClass_100</text>
+  <text x="247" y="145" text-anchor="middle" font-size="8" fill="#94a3b8">Routes /api/* to API GW</text>
+
+  <!-- S3 -->
+  <rect x="370" y="80" width="160" height="74" rx="14" fill="rgba(52,211,153,0.13)" stroke="#34d399" stroke-width="1.5" filter="url(#card-shadow)"/>
+  <text x="450" y="103" text-anchor="middle" font-size="11" font-weight="700" fill="#34d399">S3 Bucket</text>
+  <text x="450" y="118" text-anchor="middle" font-size="9" fill="#6ee7b7">SPA + Pre-gen Audio</text>
+  <text x="450" y="132" text-anchor="middle" font-size="8" fill="#94a3b8">index.html · app.js · /audio/*.mp3</text>
+  <text x="450" y="145" text-anchor="middle" font-size="8" fill="#94a3b8">Private (OAI) · immutable cache</text>
+
+  <!-- ACM -->
+  <rect x="580" y="80" width="150" height="74" rx="14" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.5" filter="url(#card-shadow)"/>
+  <text x="655" y="103" text-anchor="middle" font-size="11" font-weight="700" fill="#a78bfa">ACM Certificate</text>
+  <text x="655" y="118" text-anchor="middle" font-size="9" fill="#c4b5fd">TLS/SSL — us-east-1</text>
+  <text x="655" y="132" text-anchor="middle" font-size="8" fill="#94a3b8">DNS-validated via</text>
+  <text x="655" y="145" text-anchor="middle" font-size="8" fill="#94a3b8">Route 53 CNAME</text>
+
+  <!-- Route 53 -->
+  <rect x="780" y="80" width="150" height="74" rx="14" fill="rgba(255,153,0,0.15)" stroke="#FF9900" stroke-width="1.5" filter="url(#card-shadow)"/>
+  <text x="855" y="103" text-anchor="middle" font-size="11" font-weight="700" fill="#FF9900">Route 53</text>
+  <text x="855" y="118" text-anchor="middle" font-size="9" fill="#fbbf24">DNS — A aliases</text>
+  <text x="855" y="132" text-anchor="middle" font-size="8" fill="#94a3b8">typestar.* → CloudFront</text>
+  <text x="855" y="145" text-anchor="middle" font-size="8" fill="#94a3b8">typestar-auth.* → Cognito</text>
+
+  <!-- ════════════════════════════════════ -->
+  <!-- ROW 2: Compute layer                -->
+  <!-- ════════════════════════════════════ -->
+
+  <!-- API Gateway -->
+  <rect x="170" y="212" width="155" height="74" rx="14" fill="rgba(255,153,0,0.15)" stroke="#FF9900" stroke-width="1.5" filter="url(#card-shadow)"/>
+  <text x="247" y="235" text-anchor="middle" font-size="11" font-weight="700" fill="#FF9900">API Gateway</text>
+  <text x="247" y="250" text-anchor="middle" font-size="9" fill="#fbbf24">HTTP API v2</text>
+  <text x="247" y="264" text-anchor="middle" font-size="8" fill="#94a3b8">JWT authoriser (Cognito)</text>
+  <text x="247" y="277" text-anchor="middle" font-size="8" fill="#94a3b8">POST /progress  GET /progress</text>
+
+  <!-- Lambda -->
+  <rect x="370" y="212" width="160" height="74" rx="14" fill="rgba(56,189,248,0.13)" stroke="#38bdf8" stroke-width="1.5" filter="url(#card-shadow)"/>
+  <text x="450" y="235" text-anchor="middle" font-size="11" font-weight="700" fill="#38bdf8">Lambda</text>
+  <text x="450" y="250" text-anchor="middle" font-size="9" fill="#7dd3fc">Node.js 20 · TypeScript</text>
+  <text x="450" y="264" text-anchor="middle" font-size="8" fill="#94a3b8">Save / load user progress</text>
+  <text x="450" y="277" text-anchor="middle" font-size="8" fill="#94a3b8">128 MB · 10s timeout</text>
+
+  <!-- DynamoDB -->
+  <rect x="580" y="212" width="350" height="74" rx="14" fill="rgba(56,189,248,0.13)" stroke="#38bdf8" stroke-width="1.5" filter="url(#card-shadow)"/>
+  <text x="755" y="235" text-anchor="middle" font-size="11" font-weight="700" fill="#38bdf8">DynamoDB</text>
+  <text x="755" y="250" text-anchor="middle" font-size="9" fill="#7dd3fc">typestar-progress</text>
+  <text x="755" y="264" text-anchor="middle" font-size="8" fill="#94a3b8">PAY_PER_REQUEST · PK: userId  SK: levelId</text>
+  <text x="755" y="277" text-anchor="middle" font-size="8" fill="#94a3b8">Stores: stars · wpm · accuracy · timestamps</text>
+
+  <!-- ════════════════════════════════════ -->
+  <!-- ROW 3: Auth + IaC                   -->
+  <!-- ════════════════════════════════════ -->
+
+  <!-- Cognito -->
+  <rect x="170" y="348" width="370" height="88" rx="14" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.5" filter="url(#card-shadow)"/>
+  <text x="355" y="371" text-anchor="middle" font-size="11" font-weight="700" fill="#a78bfa">Cognito User Pool</text>
+  <text x="355" y="386" text-anchor="middle" font-size="9" fill="#c4b5fd">Email/password (SRP) + Google OAuth (hosted UI)</text>
+  <text x="355" y="400" text-anchor="middle" font-size="8" fill="#94a3b8">Custom domain: typestar-auth.auth.ap-southeast-2.amazoncognito.com</text>
+  <text x="355" y="413" text-anchor="middle" font-size="8" fill="#94a3b8">IdP: Google  ·  Callback: /callback  ·  Token validity: 1h / 30d</text>
+  <text x="355" y="426" text-anchor="middle" font-size="8" fill="#94a3b8">JWT authorises API Gateway · Progress synced per sub</text>
+
+  <!-- Terraform -->
+  <rect x="590" y="348" width="340" height="88" rx="14" fill="rgba(167,139,250,0.12)" stroke="#a78bfa" stroke-width="1.5" filter="url(#card-shadow)"/>
+  <text x="760" y="371" text-anchor="middle" font-size="11" font-weight="700" fill="#a78bfa">Terraform</text>
+  <text x="760" y="386" text-anchor="middle" font-size="9" fill="#c4b5fd">Infrastructure as Code</text>
+  <text x="760" y="400" text-anchor="middle" font-size="8" fill="#94a3b8">State → S3 (typestar-terraform-state)</text>
+  <text x="760" y="413" text-anchor="middle" font-size="8" fill="#94a3b8">Provisions: CloudFront · S3 · API GW · Lambda</text>
+  <text x="760" y="426" text-anchor="middle" font-size="8" fill="#94a3b8">DynamoDB · Cognito · ACM · Route 53</text>
+
+  <!-- ════════════════════════════════════ -->
+  <!-- CI/CD caption row                   -->
+  <!-- ════════════════════════════════════ -->
+  <rect x="170" y="458" width="760" height="96" rx="14" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="550" y="476" text-anchor="middle" font-size="10" font-weight="700" fill="#94a3b8">GitHub Actions CI/CD</text>
+
+  <text x="185" y="496" font-size="9" fill="#fbbf24" font-weight="600">deploy.yml  (on push → main)</text>
+  <text x="185" y="510" font-size="8" fill="#64748b">① npm test  ② restore audio cache  ③ npx tsx generate-audio.ts → ElevenLabs</text>
+  <text x="185" y="523" font-size="8" fill="#64748b">④ vite build (manifest baked in)  ⑤ aws s3 sync dist/  ⑥ CloudFront invalidation</text>
+
+  <text x="185" y="540" font-size="9" fill="#a78bfa" font-weight="600">infra.yml  (on push to infra/**)</text>
+  <text x="185" y="554" font-size="8" fill="#64748b">terraform init → plan → apply  ·  TF_VAR_google_client_secret via GitHub Secrets</text>
+
+  <!-- ════════════════════════════════════ -->
+  <!-- ARROWS                              -->
+  <!-- ════════════════════════════════════ -->
+
+  <!-- Browser → CloudFront (HTTPS) -->
+  <line x1="134" y1="114" x2="168" y2="114" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <text x="151" y="108" text-anchor="middle" font-size="8" fill="#38bdf8">HTTPS</text>
+
+  <!-- CloudFront → S3 (OAI, SPA + audio) -->
+  <line x1="325" y1="117" x2="368" y2="117" stroke="#f97316" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+  <text x="347" y="111" text-anchor="middle" font-size="8" fill="#f97316">OAI</text>
+
+  <!-- CloudFront → API GW (routes /api) -->
+  <line x1="247" y1="154" x2="247" y2="210" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <text x="260" y="185" font-size="8" fill="#38bdf8">/api/*</text>
+
+  <!-- CloudFront — ACM (uses TLS cert) -->
+  <line x1="325" y1="103" x2="578" y2="103" stroke="#a78bfa" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow-purple)"/>
+  <text x="452" y="97" text-anchor="middle" font-size="8" fill="#a78bfa">TLS cert</text>
+
+  <!-- Route 53 arc over the top → CloudFront -->
+  <path d="M 855 80 Q 550 38 247 80" stroke="#FF9900" stroke-width="1" stroke-dasharray="4 3" fill="none" marker-end="url(#arrow-orange)"/>
+  <text x="550" y="48" text-anchor="middle" font-size="8" fill="#FF9900">DNS resolves</text>
+
+  <!-- API GW → Lambda -->
+  <line x1="325" y1="249" x2="368" y2="249" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <text x="347" y="243" text-anchor="middle" font-size="8" fill="#38bdf8">invoke</text>
+
+  <!-- Lambda → DynamoDB -->
+  <line x1="530" y1="249" x2="578" y2="249" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <text x="554" y="243" text-anchor="middle" font-size="8" fill="#38bdf8">GetItem / PutItem</text>
+
+  <!-- Browser ↔ Cognito (auth — left-edge routing) -->
+  <path d="M 134 132 L 152 132 L 152 392 L 168 392" stroke="#a78bfa" stroke-width="1" stroke-dasharray="4 3" fill="none" marker-end="url(#arrow-purple)"/>
+  <text x="86" y="270" text-anchor="middle" font-size="8" fill="#a78bfa" transform="rotate(-90,86,270)">Auth / OAuth</text>
+
+  <!-- ElevenLabs ↔ GitHub Actions (build calls TTS) -->
+  <line x1="75" y1="455" x2="75" y2="352" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrow-yellow)"/>
+  <text x="58" y="410" text-anchor="middle" font-size="8" fill="#fbbf24" transform="rotate(-90,58,410)">calls API</text>
+
+  <!-- ElevenLabs → S3 (uploads MP3s, routed right then up) -->
+  <path d="M 134 310 L 450 310 L 450 156" stroke="#fbbf24" stroke-width="1" stroke-dasharray="4 3" fill="none" marker-end="url(#arrow-yellow)"/>
+  <text x="300" y="304" text-anchor="middle" font-size="8" fill="#fbbf24">uploads audio/*.mp3</text>
+
+  <!-- GitHub Actions → S3 (SPA deploy, dashed green) -->
+  <path d="M 134 468 L 450 468 L 450 156" stroke="#34d399" stroke-width="1" stroke-dasharray="4 3" fill="none" marker-end="url(#arrow-green)"/>
+  <text x="490" y="330" font-size="8" fill="#34d399">s3 sync dist/</text>
+
+  <!-- GitHub Actions → Terraform (tf apply) -->
+  <path d="M 134 492 L 590 410" stroke="#a78bfa" stroke-width="1.5" fill="none" marker-end="url(#arrow-purple)"/>
+  <text x="340" y="470" text-anchor="middle" font-size="8" fill="#a78bfa">tf apply</text>
+
+  <!-- API GW → Cognito (JWT verify) -->
+  <line x1="247" y1="286" x2="247" y2="346" stroke="#a78bfa" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow-purple)"/>
+  <text x="260" y="320" font-size="8" fill="#a78bfa">verify JWT</text>
+
+  <!-- ════════════════════════════════════ -->
+  <!-- LEGEND                              -->
+  <!-- ════════════════════════════════════ -->
+  <rect x="170" y="560" width="760" height="22" rx="6" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <line x1="185" y1="571" x2="205" y2="571" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="210" y="575" font-size="8" fill="#94a3b8">User request</text>
+  <line x1="275" y1="571" x2="295" y2="571" stroke="#f97316" stroke-width="1.5"/>
+  <text x="300" y="575" font-size="8" fill="#94a3b8">OAI (private S3)</text>
+  <line x1="380" y1="571" x2="400" y2="571" stroke="#34d399" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="405" y="575" font-size="8" fill="#94a3b8">CI deploy</text>
+  <line x1="460" y1="571" x2="480" y2="571" stroke="#a78bfa" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="485" y="575" font-size="8" fill="#94a3b8">Auth / IaC</text>
+  <line x1="535" y1="571" x2="555" y2="571" stroke="#fbbf24" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="560" y="575" font-size="8" fill="#94a3b8">Build-time audio gen</text>
+  <text x="680" y="575" font-size="8" fill="#94a3b8">🟠 AWS managed  🔵 Compute/data  🟢 Storage  🟣 Auth/IaC  🟡 Build-time</text>
+</svg>
