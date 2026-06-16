@@ -45,7 +45,7 @@ texture:
     - title: Home
       url: /
     - title: Blog
-      url: /blog/
+      url: /
       dropdown: posts   # ← only this item gets a posts dropdown
     - title: About
       url: /about/
