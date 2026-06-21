@@ -4,6 +4,7 @@ title: "I Built a Free Typing Tutor for Kids Because Every Other One Wanted My C
 date: 2026-06-16
 categories: aws react typescript terraform claude-code devops
 description: A deep dive into building TypeStar — a free, no-subscription typing tutor for primary school kids — with React, TypeScript, AWS, Terraform, and Claude Code. Architecture, real bugs, and an honest review of AI pair programming.
+image: "/media/typetastic.png"
 ---
 
 My kid is seven and ready to start learning to type. I figured finding a good website for this would take about five minutes.

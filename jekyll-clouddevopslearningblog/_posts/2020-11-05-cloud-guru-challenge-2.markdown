@@ -4,6 +4,7 @@ title:  " Netflix Style Recommendation Engine with Amazon SageMaker #CloudGuruCh
 date:   2020-11-5 00:00:00 +1000
 categories: aws sagemaker
 tags: aws sagemaker acloudguru python jupyter machine-learning recommendation imdb open-data
+image: "/media/moviesforme.net.png"
 ---
 # Cloud Guru Challenge - October 2020
 

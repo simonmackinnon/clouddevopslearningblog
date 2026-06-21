@@ -3,6 +3,7 @@ layout: post
 title:  "Course Review: A Cloud Guru, Advanced AWS CloudFormation- Adrian Cantrill"
 date:   2020-05-28 20:15:00 +1000
 categories: aws cloudformation
+image: "/media/record-of-completion.png"
 ---
 ## Course Review: A Cloud Guru, Advanced AWS CloudFormation- Adrian Cantrill
 ### Course URL: [https://learn.acloud.guru/course/aws-advanced-cloudformation/dashboard](https://learn.acloud.guru/course/aws-advanced-cloudformation/dashboard)

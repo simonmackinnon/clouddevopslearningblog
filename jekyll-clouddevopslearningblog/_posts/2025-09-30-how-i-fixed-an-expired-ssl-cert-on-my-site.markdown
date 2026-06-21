@@ -3,6 +3,7 @@ layout: post
 title: "How I Fixed an Expired SSL Certificate on My S3 + CloudFront Static Site"
 date: 2025-09-30 00:00:00 +1000
 categories: aws cloudfront s3 devops troubleshooting
+image: "/media/snapshots.png"
 ---
 
 When I first built [theclouddevopslearningblog.com](https://theclouddevopslearningblog.com), I chose one of the most common ways to host a static website on AWS:

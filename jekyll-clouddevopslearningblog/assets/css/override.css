@@ -220,10 +220,22 @@ img { max-width: 100%; height: auto; display: block; }
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 36px 40px;
+  overflow: hidden;
   text-decoration: none;
   color: var(--text);
   transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+}
+
+.featured-card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.featured-card-body {
+  padding: 32px 36px;
 }
 .featured-card:hover {
   border-color: var(--accent);
@@ -288,10 +300,22 @@ img { max-width: 100%; height: auto; display: block; }
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 24px;
+  overflow: hidden;
   text-decoration: none;
   color: var(--text);
   transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+}
+
+.post-card-img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.post-card-body {
+  padding: 18px 20px 20px;
 }
 .post-card:hover {
   border-color: var(--accent);
@@ -299,6 +323,8 @@ img { max-width: 100%; height: auto; display: block; }
   box-shadow: 0 4px 16px rgba(0,0,0,0.25);
   text-decoration: none;
 }
+
+.post-card:not(:has(.post-card-img)) .post-card-body { padding: 24px; }
 
 .post-card-meta {
   display: flex;

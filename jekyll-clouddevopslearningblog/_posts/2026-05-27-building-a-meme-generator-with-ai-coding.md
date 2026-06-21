@@ -4,6 +4,7 @@ title: "I Built a Serverless Meme Generator with AI Coding — Here's What Actua
 date: 2026-05-27
 categories: aws lambda python ai devops terraform
 description: A brutally honest walkthrough of building a serverless meme generator on AWS using AI pair-programming tools — switching from GitHub Copilot to Claude, the real pitfalls, and what I'd do differently.
+image: "/media/meme-generator-homepage.png"
 ---
 
 I wanted a quick side project. Something visual, a little silly, and just complex enough to flex some AWS muscles. The result is [MemeCloud](https://memes.theclouddevopslearningblog.com) — a fully serverless meme generator that lets you pick a template, add text, and download a watermark-free image. I built it almost entirely with AI pair-programming tools, starting with GitHub Copilot and then switching to Claude.

@@ -4,6 +4,7 @@ title: "Building an End-to-End Brewery Scraper for Australian Data for OpenBrewe
 date: 2025-10-04
 categories: devops data-engineering python scraping
 description: A technical deep dive into how I built a robust, multi-source brewery scraper to power Australian data for OpenBreweryDB — including scraping, enrichment, retries, and lessons learned.
+image: "/media/etl-job-architecture.jpg"
 ---
 
 ## Introduction

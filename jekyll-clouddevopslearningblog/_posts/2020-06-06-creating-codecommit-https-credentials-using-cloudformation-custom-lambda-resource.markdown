@@ -3,6 +3,7 @@ layout: post
 title:  "Creating CodeCommit HTTPS Security Credentials With CloudFormation Lambda-based Custom Resource"
 categories: aws cloudformation
 tags: aws cloudformation iam lambda
+image: "/media/httpscreds.png"
 ---
 ## Creating CodeCommit HTTPS Security Credentials With CloudFormation Lambda-based Custom Resource
 

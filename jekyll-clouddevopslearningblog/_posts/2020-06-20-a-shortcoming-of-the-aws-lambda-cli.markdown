@@ -4,6 +4,7 @@ title:  "A Shortcoming of the AWS Lambda CLI -  EventSourceMappings"
 date:   2020-06-20 14:15:00 +1000
 categories: aws lambda cli
 tags: aws cli lambda
+image: "/media/lambdanotriggers.png"
 ---
 ## A Shortcoming of the AWS Lambda CLI -  EventSourceMappings
 
