@@ -1,1 +1,14 @@
-.DS_store
+.DS_Store
+
+# npm / Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Terraform
+infra/.terraform/
+infra/*.tfstate
+infra/*.tfstate.*
+infra/*.tfvars
+infra/*.tfvars.json
+# lock file should be committed, so .terraform.lock.hcl is NOT ignored

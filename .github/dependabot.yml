@@ -1,0 +1,21 @@
+version: 2
+updates:
+  - package-ecosystem: "bundler"
+    directory: "/jekyll-clouddevopslearningblog"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    groups:
+      ruby-deps:
+        patterns:
+          - "*"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    groups:
+      actions:
+        patterns:
+          - "*"
