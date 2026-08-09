@@ -1,0 +1,152 @@
+<svg viewBox="0 0 900 960" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="sky2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <filter id="card-shadow2" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <marker id="a-blue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#38bdf8"/>
+    </marker>
+    <marker id="a-purple" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#a78bfa"/>
+    </marker>
+    <marker id="a-orange" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#f97316"/>
+    </marker>
+    <marker id="a-green" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#34d399"/>
+    </marker>
+    <marker id="a-pink" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#fb7185"/>
+    </marker>
+    <marker id="a-teal" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#2dd4bf"/>
+    </marker>
+    <marker id="a-slate" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="960" fill="url(#sky2)" rx="18"/>
+
+  <text x="450" y="30" text-anchor="middle" font-size="17" font-weight="700" fill="#f1f5f9" letter-spacing="0.4">Claude Agent Engineering Workflow</text>
+  <text x="450" y="48" text-anchor="middle" font-size="10" fill="#94a3b8">design-doc → breakdown → work-ticket, looped per ticket — Kids Code Realm &amp; Breweries Near Me</text>
+
+  <!-- ═══ MCP bracket, left margin ═══ -->
+  <line x1="25" y1="172" x2="25" y2="528" stroke="#64748b" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="16" y="350" text-anchor="middle" font-size="9" fill="#64748b" transform="rotate(-90,16,350)">Atlassian MCP server · mcp.atlassian.com</text>
+  <line x1="25" y1="215" x2="88" y2="215" stroke="#64748b" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="25" y1="345" x2="88" y2="345" stroke="#64748b" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="25" y1="475" x2="88" y2="475" stroke="#64748b" stroke-width="1" stroke-dasharray="3 3"/>
+
+  <!-- ═══ R1: Feature Request ═══ -->
+  <rect x="90" y="70" width="380" height="70" rx="12" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)" stroke-width="1" filter="url(#card-shadow2)"/>
+  <text x="280" y="98" text-anchor="middle" font-size="12" font-weight="700" fill="#e2e8f0">💡 Feature request</text>
+  <text x="280" y="115" text-anchor="middle" font-size="9" fill="#94a3b8">a one-line ask from Simon, in plain English</text>
+
+  <line x1="280" y1="140" x2="280" y2="168" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#a-blue)"/>
+
+  <!-- ═══ R2: design-doc / Confluence ═══ -->
+  <rect x="90" y="170" width="380" height="90" rx="12" fill="rgba(56,189,248,0.13)" stroke="#38bdf8" stroke-width="1.5" filter="url(#card-shadow2)"/>
+  <text x="280" y="195" text-anchor="middle" font-size="12" font-weight="700" fill="#38bdf8">📐 design-doc skill</text>
+  <text x="280" y="212" text-anchor="middle" font-size="9" fill="#7dd3fc">Architecture, components, data flow, diagrams</text>
+  <text x="280" y="227" text-anchor="middle" font-size="8" fill="#94a3b8">Diagrams built as native Confluence layout HTML</text>
+  <text x="280" y="240" text-anchor="middle" font-size="8" fill="#94a3b8">(language-mermaid auto-embeds are broken on this site)</text>
+
+  <rect x="540" y="170" width="280" height="90" rx="12" fill="rgba(56,189,248,0.08)" stroke="rgba(56,189,248,0.5)" stroke-width="1" stroke-dasharray="5 3" filter="url(#card-shadow2)"/>
+  <text x="680" y="196" text-anchor="middle" font-size="12" font-weight="700" fill="#7dd3fc">📄 Confluence</text>
+  <text x="680" y="213" text-anchor="middle" font-size="9" fill="#94a3b8">"[Project] Feature — Design" page</text>
+  <text x="680" y="228" text-anchor="middle" font-size="8" fill="#64748b">nested under the project's Engineering parent</text>
+
+  <line x1="470" y1="215" x2="538" y2="215" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#a-blue)"/>
+  <text x="504" y="209" text-anchor="middle" font-size="8" fill="#38bdf8">publishes</text>
+
+  <line x1="280" y1="260" x2="280" y2="298" stroke="#38bdf8" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#a-blue)"/>
+  <text x="360" y="283" text-anchor="middle" font-size="8" fill="#7dd3fc">you review &amp; confirm the design</text>
+
+  <!-- ═══ R3: breakdown / Jira ═══ -->
+  <rect x="90" y="300" width="380" height="90" rx="12" fill="rgba(167,139,250,0.13)" stroke="#a78bfa" stroke-width="1.5" filter="url(#card-shadow2)"/>
+  <text x="280" y="325" text-anchor="middle" font-size="12" font-weight="700" fill="#a78bfa">🗂️ breakdown skill</text>
+  <text x="280" y="342" text-anchor="middle" font-size="9" fill="#c4b5fd">Epic + child Stories/Tasks/Bugs</text>
+  <text x="280" y="357" text-anchor="middle" font-size="8" fill="#94a3b8">Each ticket: acceptance criteria + Test Plan</text>
+  <text x="280" y="370" text-anchor="middle" font-size="8" fill="#94a3b8">(Unit always; Integration/E2E/Regression as needed)</text>
+
+  <rect x="540" y="300" width="280" height="90" rx="12" fill="rgba(167,139,250,0.08)" stroke="rgba(167,139,250,0.5)" stroke-width="1" stroke-dasharray="5 3" filter="url(#card-shadow2)"/>
+  <text x="680" y="326" text-anchor="middle" font-size="12" font-weight="700" fill="#c4b5fd">🎫 Jira</text>
+  <text x="680" y="343" text-anchor="middle" font-size="9" fill="#94a3b8">To Do → In Progress → In Review → Done</text>
+  <text x="680" y="358" text-anchor="middle" font-size="8" fill="#64748b">Flagged = Impediment stands in for "Blocked"</text>
+  <text x="680" y="371" text-anchor="middle" font-size="8" fill="#64748b">"blocks / is blocked by" links set the run order</text>
+
+  <line x1="470" y1="345" x2="538" y2="345" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#a-purple)"/>
+  <text x="504" y="339" text-anchor="middle" font-size="8" fill="#a78bfa">creates</text>
+
+  <line x1="280" y1="390" x2="280" y2="418" stroke="#f97316" stroke-width="1.5" marker-end="url(#a-orange)"/>
+
+  <!-- ═══ R4: work-ticket loop / GitHub ═══ -->
+  <rect x="90" y="420" width="380" height="110" rx="12" fill="rgba(249,115,22,0.14)" stroke="#f97316" stroke-width="1.5" filter="url(#card-shadow2)"/>
+  <text x="280" y="446" text-anchor="middle" font-size="12" font-weight="700" fill="#f97316">🔁 work-ticket skill — one per /loop turn</text>
+  <text x="280" y="463" text-anchor="middle" font-size="9" fill="#fdba74">Claims next To Do ticket, branches, implements,</text>
+  <text x="280" y="477" text-anchor="middle" font-size="9" fill="#fdba74">writes the tests its Test Plan names</text>
+  <text x="280" y="493" text-anchor="middle" font-size="8" fill="#94a3b8">Local gate: unit/e2e as specified + full build, all must pass</text>
+  <text x="280" y="507" text-anchor="middle" font-size="8" fill="#94a3b8">Skips ambiguous or already-flagged tickets rather than guessing</text>
+
+  <rect x="540" y="430" width="280" height="90" rx="12" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)" stroke-width="1" filter="url(#card-shadow2)"/>
+  <text x="680" y="456" text-anchor="middle" font-size="12" font-weight="700" fill="#e2e8f0">🐙 GitHub</text>
+  <text x="680" y="473" text-anchor="middle" font-size="9" fill="#94a3b8">gh pr create → gh pr checks</text>
+  <text x="680" y="488" text-anchor="middle" font-size="8" fill="#64748b">CI status polled (Monitor), never assumed</text>
+  <text x="680" y="501" text-anchor="middle" font-size="8" fill="#64748b">merge is still a human action, always</text>
+
+  <line x1="470" y1="475" x2="538" y2="475" stroke="#f97316" stroke-width="1.5" marker-end="url(#a-orange)"/>
+  <text x="504" y="469" text-anchor="middle" font-size="8" fill="#f97316">opens PR</text>
+
+  <line x1="280" y1="530" x2="280" y2="558" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#a-slate)"/>
+
+  <!-- ═══ R5: Gate / Blocked ═══ -->
+  <rect x="90" y="560" width="380" height="80" rx="12" fill="rgba(148,163,184,0.10)" stroke="#94a3b8" stroke-width="1.5" filter="url(#card-shadow2)"/>
+  <text x="280" y="586" text-anchor="middle" font-size="12" font-weight="700" fill="#e2e8f0">🔎 Test Plan + CI gate</text>
+  <text x="280" y="603" text-anchor="middle" font-size="9" fill="#94a3b8">named tests pass locally, build succeeds,</text>
+  <text x="280" y="617" text-anchor="middle" font-size="9" fill="#94a3b8">GitHub Actions run is green</text>
+
+  <rect x="540" y="560" width="280" height="80" rx="12" fill="rgba(251,113,133,0.12)" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="5 3" filter="url(#card-shadow2)"/>
+  <text x="680" y="586" text-anchor="middle" font-size="12" font-weight="700" fill="#fb7185">🚩 Blocked</text>
+  <text x="680" y="603" text-anchor="middle" font-size="9" fill="#fda4af">Flagged = Impediment + comment</text>
+  <text x="680" y="617" text-anchor="middle" font-size="8" fill="#94a3b8">explaining exactly what failed and what was tried</text>
+
+  <line x1="470" y1="600" x2="538" y2="600" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#a-pink)"/>
+  <text x="504" y="594" text-anchor="middle" font-size="8" fill="#fb7185">on fail</text>
+
+  <line x1="280" y1="640" x2="280" y2="668" stroke="#34d399" stroke-width="1.5" marker-end="url(#a-green)"/>
+  <text x="292" y="658" font-size="8" fill="#34d399">pass</text>
+
+  <line x1="680" y1="640" x2="680" y2="668" stroke="#fb7185" stroke-width="1.5" marker-end="url(#a-pink)"/>
+
+  <!-- ═══ R6: In Review / Notify ═══ -->
+  <rect x="90" y="670" width="380" height="70" rx="12" fill="rgba(52,211,153,0.13)" stroke="#34d399" stroke-width="1.5" filter="url(#card-shadow2)"/>
+  <text x="280" y="696" text-anchor="middle" font-size="12" font-weight="700" fill="#34d399">✅ Jira → In Review</text>
+  <text x="280" y="713" text-anchor="middle" font-size="9" fill="#6ee7b7">Ready for the human to merge — no auto-merge today</text>
+
+  <rect x="540" y="670" width="280" height="70" rx="12" fill="rgba(251,113,133,0.08)" stroke="rgba(251,113,133,0.5)" stroke-width="1" stroke-dasharray="5 3" filter="url(#card-shadow2)"/>
+  <text x="680" y="696" text-anchor="middle" font-size="12" font-weight="700" fill="#fda4af">🔔 Push notification</text>
+  <text x="680" y="713" text-anchor="middle" font-size="9" fill="#94a3b8">Simon gets pulled in, loop moves to next ticket</text>
+
+  <line x1="280" y1="740" x2="280" y2="768" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#a-teal)"/>
+
+  <!-- ═══ R7: Document ═══ -->
+  <rect x="90" y="770" width="730" height="70" rx="12" fill="rgba(45,212,191,0.12)" stroke="#2dd4bf" stroke-width="1.5" filter="url(#card-shadow2)"/>
+  <text x="455" y="796" text-anchor="middle" font-size="12" font-weight="700" fill="#2dd4bf">📝 Document</text>
+  <text x="455" y="813" text-anchor="middle" font-size="9" fill="#94a3b8">One row on the Confluence changelog page + a matching comment on the Jira ticket</text>
+
+  <!-- loop back -->
+  <path d="M 90 805 L 62 805 L 62 475 L 88 475" stroke="#f97316" stroke-width="1.5" fill="none" stroke-dasharray="4 3" marker-end="url(#a-orange)"/>
+  <text x="40" y="640" text-anchor="middle" font-size="9" fill="#fdba74" transform="rotate(-90,40,640)">next ticket ↺</text>
+
+  <!-- ═══ Legend ═══ -->
+  <rect x="90" y="862" width="730" height="76" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="108" y="882" font-size="9" font-weight="600" fill="#94a3b8">Shared across projects:</text>
+  <text x="108" y="897" font-size="8" fill="#64748b">One Atlassian MCP server, one config file — but it must live at the true workspace root, not inside a project folder, or it silently never loads.</text>
+  <text x="108" y="912" font-size="8" fill="#64748b">Each project (Kids Code Realm, Breweries Near Me, …) gets its own Jira project key, Confluence space, and skill copies — gating rules adapt per repo</text>
+  <text x="108" y="925" font-size="8" fill="#64748b">(e.g. Breweries Near Me has no PR-triggered CI yet, so its work-ticket skill is written to never merge its own PR).</text>
+</svg>
