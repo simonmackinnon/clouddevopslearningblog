@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "I Gave Claude Code a Jira Board and a Confluence Space — Here's How It's Running My Side Projects"
-date: 2026-08-10
+date: 2026-08-10 00:00:00 +1000
 categories: claude-code jira confluence ai-agents devops automation
 description: How I wired Claude Code into Jira and Confluence with a design-doc → breakdown → work-ticket skill chain so it can drive real feature work end-to-end across my side projects — the gotchas, the guardrails, and what's next.
 image: "/media/claude-agent-workflow-architecture.svg"
