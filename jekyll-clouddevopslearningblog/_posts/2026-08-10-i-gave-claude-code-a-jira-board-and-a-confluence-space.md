@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "I Gave Claude Code a Jira Board and a Confluence Space — Here's How It's Running My Side Projects"
+title: "I Gave Claude Code a Jira Board Because I Only Get Eleven Minutes Between School Runs"
 date: 2026-08-10 00:00:00 +1000
 categories: claude-code jira confluence ai-agents devops automation
 description: How I wired Claude Code into Jira and Confluence with a design-doc → breakdown → work-ticket skill chain so it can drive real feature work end-to-end across my side projects — the gotchas, the guardrails, and what's next.
 image: "/media/claude-agent-workflow-architecture.svg"
 ---
 
-I've got two kids under six, which means my actual engineering hours are whatever's left over between lunch-making, school drop-off, and pick-up — a window that closes fast and does not care that you were mid-thought. And in that window I'm somehow running [Kids Code Realm](https://coderealm.theclouddevopslearningblog.com), [TypeStar](https://typestar.theclouddevopslearningblog.com), [Breweries Near Me](https://breweriesnearme.theclouddevopslearningblog.com), [StoryReads](https://bedtime.theclouddevopslearningblog.com), and this blog, all at once. For a while my process for all of them was the same: open the repo, tell Claude Code what I wanted in a paragraph, watch it write code, review the diff, ship it — usually with about eleven minutes to spare before I had to go find shoes. That works fine for small changes. It falls apart the moment a feature needs more than one sitting, or I come back three days later, in the next spare eleven minutes, and can't remember what "add the readiness check thing" was supposed to mean.
+I've got two kids under seven, which means my actual engineering hours are whatever's left over between lunch-making, school drop-off, and pick-up — a window that closes fast and does not care that you were mid-thought. And in that window I'm somehow running [Kids Code Realm](https://coderealm.theclouddevopslearningblog.com), [TypeStar](https://typestar.theclouddevopslearningblog.com), [Breweries Near Me](https://breweriesnearme.theclouddevopslearningblog.com), [StoryReads](https://bedtime.theclouddevopslearningblog.com), and this blog, all at once. For a while my process for all of them was the same: open the repo, tell Claude Code what I wanted in a paragraph, watch it write code, review the diff, ship it — usually with about eleven minutes to spare before I had to go find shoes. That works fine for small changes. It falls apart the moment a feature needs more than one sitting, or I come back three days later, in the next spare eleven minutes, and can't remember what "add the readiness check thing" was supposed to mean.
 
 So I stopped treating Claude Code like a smart autocomplete and started treating it like a junior engineer on a real team — one with a backlog, a definition of done, and a paper trail. That means Jira for tickets and Confluence for design docs, wired up through Claude's MCP support and a small chain of custom skills. This post is what that setup actually looks like, what broke while I built it, and where I'm taking it next.
 
